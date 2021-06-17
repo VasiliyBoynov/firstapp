@@ -1,5 +1,6 @@
 package ru.geekbrains.jee.Lesson1;
 
+
 public class Product {
     private long id;
     private String title;
