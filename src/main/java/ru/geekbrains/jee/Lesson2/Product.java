@@ -1,5 +1,12 @@
 package ru.geekbrains.jee.Lesson2;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
 public class Product {
     private long id;
     private String title;
@@ -10,6 +17,7 @@ public class Product {
         this.title = title;
         this.cost = cost;
     }
+    public Product(){}
 
     public long getId() {
         return id;
@@ -33,5 +41,9 @@ public class Product {
 
     public void setCost(float cost) {
         this.cost = cost;
+    }
+
+    public void info(){
+        System.out.println("ID:"+getId()+" Продукт :"+getTitle() + " Цена :" + getCost());
     }
 }

@@ -1,10 +1,12 @@
 package ru.geekbrains.jee.Lesson2;
 
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
-
+@Component("db")
 public class DB {
     private static DB instance;
 
